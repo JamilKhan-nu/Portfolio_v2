@@ -44,7 +44,7 @@ const Blog = (props) => {
           image={props.data.contentfulBlog.blogImage.gatsbyImage}
           alt="blog image"
         />
-        <h1>
+        <h1 className="text-2xl">
           {props.data.contentfulBlog.title}
         </h1>
         <p>{props.data.contentfulBlog.publishedData}</p>
