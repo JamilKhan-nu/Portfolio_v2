@@ -1,0 +1,59 @@
+.books {
+  list-style-type: none;
+  margin-top: 2rem;
+}
+
+.book-thumbnail {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+
+.book-cover {
+  height: 260px;
+  width: 180px;
+  margin-right: 2rem;
+}
+
+.title {
+  color: #458be0;
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.author {
+  margin-bottom: 0.5rem;
+}
+
+.type {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.summary {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.fullnotes {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #458be0;
+}
+
+@media only screen and (min-device-width: 390px) and (max-device-width: 844px) {
+  .book-thumbnail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .book-cover {
+    display: flex;
+    justify-content: center;
+  }
+}

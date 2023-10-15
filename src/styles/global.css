@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+
+@layer utilities {
+  .nav {
+    @apply relative ml-10 text-sky font-semibold tracking-[1px] hover:text-coffee;
+  }
+  .nav::after {
+    @apply content-[''] bg-bubble-gum h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300;
+  }
+  .nav:hover::after {
+    @apply w-[100%];
+  }
+}

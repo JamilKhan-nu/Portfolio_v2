@@ -1,0 +1,98 @@
+.works {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.myWorks {
+  font-size: 5rem;
+  font-weight: bolder;
+  letter-spacing: 0.5rem;
+}
+
+.funProject {
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.pera {
+  font-size: 1rem;
+}
+
+.projects {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+
+  .project {
+    margin-bottom: 2rem;
+    border: solid black 1px;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .image {
+    width: 400px;
+    height: 250px;
+    margin-right: 3rem;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.techStack {
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+
+  .link {
+    padding: 5px 10px;
+    color: white;
+    background: black;
+    border-radius: 10px;
+    margin-right: 1rem;
+  }
+
+  .link:hover {
+    background: white;
+    color: black;
+  }
+}
+
+@media only screen and (min-device-width: 390px) and (max-device-width: 844px) {
+  .myWorks {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    letter-spacing: 0.5rem;
+  }
+  .funProject {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: none;
+  }
+  .image {
+    width: 250px;
+    height: 200px;
+    margin-right: 0;
+  }
+  .details {
+    display: none;
+  }
+}
