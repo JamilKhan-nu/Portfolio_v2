@@ -24,24 +24,17 @@ function About() {
           }
         }
       }
-      allContentfulSkills(limit: 8, sort: {skillset: ASC}) {
-        edges {
-          node {
-            skillset
-            skillImage {
-              gatsbyImage(width: 250, height: 250)
-            }
-          }
-        }
-      }
+      
+      
     }
   `);
 
   return (
     <Layout>
       <Head title="About" />
+      <div className="flex flex-col justify-between  mb-40 w-full h-auto">
       <div className="mt-40 gap-5 flex flex-row justify-between">
-        <div className="flex flex-col w-1/4 h-auto bg-white  p-2 rounded-lg">
+        <div className="flex flex-col w-1/4 h-auto bg-white  p-2 rounded-lg" data-aos="fade-right" data-aos-delay="500">
           <img src={picture} alt="Profile" />
           <h1 className="mt-6 text-5xl tracking-[2rem]  uppercase font-bold">
             Jamil{" "}
@@ -68,13 +61,13 @@ function About() {
           </p>
         </div>
         <div className="flex flex-col justify-end  w-auto h-auto">
-          <div>
-            <h1 className="text-5xl bg-white flex justify-center py-2 rounded-lg font-bold tracking-wider">
+          <div >
+            <h1 className="text-5xl bg-white flex justify-center py-2 rounded-lg font-bold tracking-wider" data-aos="fade-down" data-aos-delay="400">
               Hey there.
               <br />
               Nice to meet you.
             </h1>
-            <div className="bg-white my-3 p-5 rounded-lg">
+            <div className="bg-white my-3 p-5 rounded-lg" data-aos="fade-up" data-aos-delay="500">
               <h1 className="pb-2 text-2xl uppercase font-semibold tracking-widest">
                 Profile
               </h1>
@@ -85,35 +78,19 @@ function About() {
                 )}
               </p>
             </div>
-            <div className="w-[55rem] h-[50rem] py-5 rounded-lg bg-white">
+            <div className="w-[55rem] h-[50rem] py-5 rounded-lg bg-white" data-aos="fade-up" data-aos-delay="500">
             <h1 className=" pb-12 flex justify-center text-2xl uppercase font-semibold tracking-widest">
                 My Stacks
               </h1>
-              <ul className="flex flex-row overflow-hidden">
-                {data.allContentfulSkills.edges.map((edge) => {
-                  return (
-                    <li className="">
-                      <div className="animate-marquee flex flex-row rounded-lg w-60 h-24 bg-grey gap-1 mx-2  whitespace-nowrap">
-                        <GatsbyImage
-                          className="rounded-md w-1/3 my-2 mx-2"
-                          image={edge.node.skillImage.gatsbyImage}
-                          alt="skill image"
-                        />
-                        <h1 className="flex items-center text-3xl font-bold ">
-                          {edge.node.skillset}
-                        </h1>
-                      </div>
-                      
-                    </li>
-                  );
-                })}
+              <ul className="flex flex-row relative overflow-x-hidden">
+                
               </ul>
             </div>
           </div>
-          <h1 className="pt-5 pb-2 text-2xl uppercase font-semibold tracking-widest">
+          <h1 className="pt-5 pb-2 text-2xl uppercase font-semibold tracking-widest" data-aos="fade-up" data-aos-delay="500">
             Education
           </h1>
-          <div className="flex flex-row">
+          <div className="flex flex-row" data-aos="fade-up" data-aos-delay="500">
             {data.allContentfulEducation.edges.map((edge) => {
               return (
                 <ol class="border-l border-navy dark:border-navy md:flex md:justify-center md:gap-6 md:border-l-0 md:border-t">
@@ -143,6 +120,7 @@ function About() {
             <p>details of education</p>
           </div>
         </div>
+      </div>   
       </div>
     </Layout>
   );

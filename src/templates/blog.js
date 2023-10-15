@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Head from "../components/head"
 import { GatsbyImage } from "gatsby-plugin-image"
-import * as blogStyles from "../styles/blogtemplate.module.scss"
 import PageWithComments from "./PageWithComments"
 
 export const query = graphql`
@@ -36,23 +35,27 @@ const Blog = (props) => {
   return (
     <Layout>
       <Head title={props.data.contentfulBlog.title} />
-      <div>
-        <h1 className={blogStyles.blogTitle}>
+      <div className="flex flex-col justify-between mb-40">
+        <div>
+
+       
+        <GatsbyImage
+          className=" mt-40"
+          image={props.data.contentfulBlog.blogImage.gatsbyImage}
+          alt="blog image"
+        />
+        <h1>
           {props.data.contentfulBlog.title}
         </h1>
         <p>{props.data.contentfulBlog.publishedData}</p>
         <hr />
         <br />
-        <GatsbyImage
-          className={blogStyles.blogImage}
-          image={props.data.contentfulBlog.blogImage.gatsbyImage}
-          alt="blog image"
-        />
         {documentToReactComponents(
           JSON.parse(props.data.contentfulBlog.postBody.raw, options)
         )}
-      </div>
+         </div>
       <PageWithComments />
+      </div>
     </Layout>
   )
 }

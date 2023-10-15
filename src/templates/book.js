@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import * as booktemstyles from "../styles/bookTemplate.module.css"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Head from "../components/head"
@@ -30,28 +29,28 @@ const Book = (props) => {
   return (
     <Layout>
       <Head title={props.data.contentfulBooks.bookTitle} />
-      <div className={booktemstyles.bookThumbnail}>
-        <div className={booktemstyles.bookCover}>
+      <div>
+        <div>
           <GatsbyImage
             image={props.data.contentfulBooks.bookCover.gatsbyImage}
             alt="book cover"
           />
         </div>
         <div>
-          <h3 className={booktemstyles.title}>
+          <h3>
             {props.data.contentfulBooks.bookTitle}
           </h3>
-          <h5 className={booktemstyles.author}>
+          <h5>
             Author: {props.data.contentfulBooks.author}
           </h5>
-          <h6 className={booktemstyles.type}>
+          <h6>
             Type: {props.data.contentfulBooks.type}
           </h6>
-          <p className={booktemstyles.date}>
+          <p>
             Date Read: {props.data.contentfulBooks.date}
           </p>
-          <p className={booktemstyles.summary}>
-            {" "}
+          <p>
+            
             {props.data.contentfulBooks.summary}
           </p>
         </div>

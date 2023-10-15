@@ -13,7 +13,7 @@ function Footer() {
   `);
   return (
     <footer
-      class="bg-white rounded-lg shadow dark:bg-gray-900 m-4 mt-80"
+      class="bg-white mt-auto relative bottom-0 rounded-lg shadow  m-4"
       data-aos="fade-up"
       data-aos-delay="500"
     >

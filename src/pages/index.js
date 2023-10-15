@@ -79,6 +79,7 @@ export default function Home() {
   return (
     <Layout>
       <Head title="Home" />
+      <div className="flex flex-col justify-between w-full h-auto mb-60">
       <div className="flex items-center justify-between w-full h-screen">
         <div className="w-1/2 " data-aos="fade-right" data-aos-delay="500">
           <h1 className="text-6xl leading-tight font-bold text-sky">
@@ -112,6 +113,16 @@ export default function Home() {
           </p>
         </div>
         <div className="w-1/2 " data-aos="fade-left" data-aos-delay="500">
+        <div className="flex flex-col ml-9  ">
+            <h1 className="bg-white px-3 py-2 w-56 rounded-lg text-2xl">
+              👋 Hi, I am <br />
+              <span className="text-4xl font-bold" >
+                Jamil Khan
+              </span>
+            </h1>
+<h1 className="bg-white mt-3 px-3 py-2 w-44 rounded-lg text-lg">Software Engineer</h1>
+            
+          </div>
           <img
             src={carton}
             alt="profile"
@@ -343,6 +354,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </Layout>
   );

@@ -11,7 +11,7 @@ function Layout({ children }) {
     offset: 0,
   });
   return (
-    <div className="flex flex-col scroll-smooth overflow-auto  px-[20rem] bg-grey  text-sky">
+    <div className="flex flex-col scroll-smooth overflow-hidden  px-[20rem] bg-grey  text-sky">
       <Header />
 
       <main>{children}</main>
